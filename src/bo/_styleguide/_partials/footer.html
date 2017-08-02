@@ -1,0 +1,17 @@
+<script src="vendor/prism.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="../assets/js/bundle.js"></script>
+<script>
+$(document).ready(function() {
+    $('.animation-trigger').click(function(e) {
+      e.preventDefault();
+      var $trigger = $(this);
+      var $animatingObject = $('#animating-object');
+      var $currentAnimation = $trigger.attr('data-animation-name');
+      $animatingObject.removeClass();
+      $animatingObject.addClass($currentAnimation);
+    });
+  });
+</script>
+</body>
+</html>

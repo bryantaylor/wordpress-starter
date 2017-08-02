@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/css/application.css">
+  </head>
+  <body class="body p-t-lg">
+
+  @include("_styleguide/_partials/nav.html")
+
+  <div class="container">
+    <h1 class="jumbo p-t-lg" id="main">Base elements</h1>
+  <p>The purpose of this HTML is to help determine what default settings are with Bitters and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
+  <ul>
+    <li><a href="#">Layout</a></li>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="#">Masonry</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Flag</a></li>
+      </ul>
+    <li><a href="#">Type</a></li>
+      <ul>
+        <li><a href="#">Paragraph</a></li>
+        <li><a href="#">Headings</a></li>
+        <li><a href="#">Links</a></li>
+        <li><a href="#">Lists</a></li>
+        <li><a href="#">Blockquote</a></li>
+        <li><a href="#">Code</a></li>
+      </ul>
+    <li><a href="#">Tables</a></li>
+    <li><a href="#">Buttons</a></li>
+    <li><a href="#">Form</a></li>
+      <ul>
+        <li><a href="#">Select</a></li>
+        <li><a href="#">Radio</a></li>
+        <li><a href="#">Checkbox</a></li>
+        <li><a href="#">File Upload</a></li>
+        <li><a href="#">Text Inputs</a></li>
+      </ul>
+  </ul>
+
+  @include("02-base/type/type.html")
+  @include("02-base/buttons/buttons.html")
+
+   <script src="../assets/css/bundle.js"></script>
+</body>
+</html>

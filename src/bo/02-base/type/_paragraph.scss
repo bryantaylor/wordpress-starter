@@ -1,0 +1,18 @@
+/*
+Paragraph
+--------------
+@description: Base styles for paragraph elements
+-----------------------------------------------------------------------------*/
+
+p,
+.paragraph {
+  @include body-copy;
+  margin: 0 0 $small-spacing;
+  color: color(base,dark);
+  font-feature-settings: "kern", "liga", "pnum";
+  text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+

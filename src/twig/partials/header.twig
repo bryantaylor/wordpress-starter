@@ -1,0 +1,32 @@
+{# NavBar #}
+<header class="NavBar {% if is_homepage %}{% endif %}">
+  {# NavBar Wrapper #}
+  <div class="NavBar-wrapper">
+    {# NavBar Logo #}
+    <a class="NavBar-anchor" href="{{site.url}}">
+      Home Anchor
+      {# <img class="NavBar-logo" src="{{site.theme.link}}/assets/img/" alt=""> #}
+    </a>
+    {# END: NavBar Logo #}
+    {# Mobile Navigation Toggle #}
+    <button class="NavBar-mobileToggle js-menu-toggle">
+      <span>Menu</span>
+    </button>
+    {# END: Mobile Navigation Toggle #}
+    {# Global Site Navigation #}
+    {% if menu %}
+    <nav class="NavBar-menuWrapper" role="navigation">
+      <ul class="NavBar-menu js-NavBar-mainMenu">
+      {% for item in menu %}
+        <li class="NavBar-item">
+          <a class="NavBar-link{% if item.is_active %} active{% endif %}" href="{{item.url}}">{{item.title}}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+    {# END: Global Site Navigation #}
+  </div>
+  {# END: NavBar-wrapper #}
+</header>
+{# END: NavBar #}

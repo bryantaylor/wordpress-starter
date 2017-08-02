@@ -1,0 +1,143 @@
+# ==========================================================================================================================
+#
+# Project Details
+#
+# ---
+projectName: "wordpress-starter"                    # For WordPress projects, this will be the theme name
+GAcode: null                                        # Google Analytics code eg -"UA-66481277-1"
+browserSync:
+ proxy: "wordpress-starter.dev"
+ host: "wordpress-starter.dev"
+ port: 3000
+ notify: false
+ open: "external"
+ logPrefix: "wordpress-starter"
+  # ---
+
+  # ---
+# ==========================================================================================================================
+#
+# Build
+#
+# ---
+build-order: #- This is the order your build steps are executed.  If not listed here, the step will be skipped
+  - Images
+  - Stylesheets
+  - Javascript
+  - Vendor
+  - Twig
+  - WP-functions
+  - WP-meta
+  - WP-templates
+  - ACF-json
+build-steps: #- Define your build steps here.  Build steps are not enabled unless they are listed in the "build_order" above
+  Images:
+    tasks: ['minify-images']
+    move:
+      from: 'src/img/minified/'
+      to: 'build/assets/img/'
+  Stylesheets:
+    tasks: ['generate-iconfont', 'fonts','compile-sass']
+  Javascript:
+    tasks: ['bojs']
+  Vendor:
+    move:
+      from: 'src/js/*.js'
+      to: 'build/assets/js/main.js'
+  Twig:
+    move:
+      from: 'src/twig/'
+      to: 'build/views/'
+  WP-functions:
+    move:
+      from: 'src/wp-functions/'
+      to: 'build/includes/'
+  WP-meta:
+    move:
+      from: 'src/wp-meta/'
+      to: 'build/'
+  WP-templates:
+    move:
+      from: 'src/wp-templates/'
+      to: 'build/'
+  ACF-json:
+    move:
+      from: 'src/acf-json/'
+      to: 'build/acf-json/'
+# ==========================================================================================================================
+#
+# Dist
+#
+# ---
+dist:
+  src: './build'
+  dest: './dist'
+  tasks:
+    - ['optimize-css','optimize-js']
+    - ['minify-css', 'minify-js']
+    - fingerprint-assets
+    - analyze-assets
+# ==========================================================================================================================
+#
+# Task Config (tasks listed in alphabetical order)
+#
+# ---
+# Task : Compile Sass
+compile-sass:
+  src: './src/bo/*.scss'                          # Source path(s) for the gulp-sass pipe
+  dest: './build/assets/css'                        # Path to write compiled CSS
+  watch: ['./src/bo/*.scss','./src/bo/**/*.scss', './src/bo/**/**/*.scss']
+  autoprefix_browsers: ['last 2 version', 'ie 9']   # Browser settings based on gulp-autoprefixer config
+  settings:                                         # settings for gulp-sass
+    indentedSyntax: false                           # Set to true if you want to use sass indented syntax
+    errLogToConsole: errLogToConsole                #
+# Task : Fonts
+fonts:
+  # ---
+  watch: 
+    - './src/fonts/**/*.woff2'
+    - './src/fonts/**/*.woff'
+    - './src/fonts/**/*.eot'
+    - './src/fonts/**/*.ttf'
+    - './src/fonts/**/*.svg'
+    - './src/fonts/**/*.css'
+  # ---
+  clean:
+    - './src/scss/02-base/type/_fonts.scss'
+    - './build/assets/fonts'
+  # --
+  stylesheets:
+    src: './src/fonts/**/*.css'
+    fontLocation: '../fonts/'
+    outputFile: '_fonts.scss'
+    outputPath: './src/bo/02-base/type/'
+  # ---
+  fontFiles:
+    src:
+      - ./src/fonts/**/*.woff2
+      - ./src/fonts/**/*.woff
+      - ./src/fonts/**/*.eot
+      - ./src/fonts/**/*.ttf
+      - ./src/fonts/**/*.svg
+    dest: "./build/assets/fonts"
+# Task : Generate Icon Font
+generate-iconfont:
+  src: "./src/icons/*.svg"                          # Path of the raw icons (as SVG)
+  base: "./src"                                     # Set the base of "icons" folder. Without it, the template goes to weird places (cant leave src)                                                      #
+  fontDest: "build/assets/fonts/icons/"                     # This is where the icon-font gulp pipe spits the webfont files
+  clean:                                            # These are deleted & re-generated every time you build
+    - './build/assets/fonts/icons/'
+  sassOutput: "../../../../src/bo/02-base/icons/_icons.scss"  # The path where the (S)CSS file should be saved, relative to the font destination (fontDest)
+  fontPath: "../fonts/icons/"                           # Path of fonts, relative to CSS (not scss) (eg, this is where @font-face points)
+  className: "icon"                                    # Basis of the icons' class in CSS
+  template: "gulp/util/_iconFont-template.scss"        # The template path for generating the stylesheet (we use scss)
+  # ---
+  watch: "./src/icons/*.svg"
+# Task : Minify Images
+minify-images:
+  src: "./src/img/original/**"
+  dest: "./src/img/minified/"
+bojs:
+  clean:
+    - './build/assets/js'
+    

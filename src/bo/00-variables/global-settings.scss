@@ -1,0 +1,81 @@
+@import "../01-tools/sass/color-maps";
+
+/* 
+Color Pallette. 
+Tints available as a function 
+*/
+$colors : (
+  brand : (
+    primary                 : #2b00f7, 
+    secondary               : #ffffff,
+    accent                  : #ffffff
+  ),
+  base : (
+    light                   : #ffffff,
+    dark                    : #000000
+  ),
+  alert : (
+    success                 : #6fba82,
+    info                    : #5073b8,
+    warning                 : #f79533,
+    error                   : #E36203
+  )
+);
+
+/*
+Sizing & Spacing.
+All layout spacing and ui-sizing should be built on top of this variable map
+*/
+ $body-background           : color(base,light);
+ $text-color                : color(base,dark);
+ $user-action-color         : color(brand,primary);
+ $user-action-color-hover   : color(brand,primary);
+ $border-color              : color(base,light);
+
+/*
+Sizing & Spacing.
+All layout spacing and ui-sizing should be built on top of this variable map
+*/
+  $box-sizing               : border-box;
+  $base-font-size           : 16px;
+  $base-line-height         : 1.5;
+  $base-border-radius       : .25rem;
+  $base-border-color        : color(base,dark);
+  $base-border              : 1px solid $base-border-color;
+  $base-box-shadow          : 7px 8px 15px -7px rgba(0,0,0,0.09);
+  $base-spacing             : $base-line-height * 1rem;
+  $small-spacing            : $base-spacing / 2;
+  $section-spacing          : $base-spacing * 2;
+
+/* 
+Grid Settings.
+These are used 
+*/
+  $grid-columns             : 12;
+  $grid-gutter-width        : $base-spacing;
+  $enable-flex              : false;
+  $enable-grid-classes      : true;
+  $max-width                : 1120px;
+
+/* 
+Breakpoints.  
+If grid classes are enabled, each breakpoint generated about 5kb of css 
+*/
+$grid-breakpoints: (
+  xs                        : 0,      // Extra small screen / phone
+  sm                        : 34em,   // Small screen / phone
+  md                        : 48em,   // Medium screen / tablet
+  lg                        : 62em,   // Large screen / desktop
+  xl                        : 75em    // Extra large screen / wide desktop
+);
+
+/*
+Animation.
+Use these settings to keep overall animation feeling consistent.  
+*/
+  $base-duration            : 250ms !default;
+  $base-timing              : ease-out !default;
+  $fastDuration             : 100ms !default;
+  $mediumDuration           : 300ms !default;
+  $slowDuration             : 500ms !default;
+  $default-transition-all   : all $base-duration $base-timing;

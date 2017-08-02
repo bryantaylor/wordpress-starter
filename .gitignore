@@ -1,0 +1,14 @@
+.DS_Store
+.sass-cache
+.publish
+dist
+Desktop.ini
+jspm_packages
+node_modules
+npm-debug.log
+
+!build/js/config.js
+build/
+
+composer.lock
+vendor/

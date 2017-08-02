@@ -1,0 +1,19 @@
+{# PAGINATION #}
+  {% if pagination.pages %}
+  <div class="Pagination">
+    {% if pagination.prev %}
+    <a class="Pagination__prev" href="{{pagination.prev.link}}">Prev</a>
+    {% endif %}
+    {% if pagination.pages %}
+    <ul class="Pagination__pageList">
+      <li class="pageList__page">{{pagination.current}}</li>
+      <li class="pageList__page page--of">of</li>
+      <li class="pageList__page">{{pagination.total}}</li>
+    </ul>
+    {% endif %}
+    {% if pagination.next %}
+    <a class="Pagination__next" href="{{pagination.next.link}}">Next</a>
+    {% endif %}
+  </div>
+  {% endif %}
+{# END: PAGINATION #}

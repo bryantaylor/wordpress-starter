@@ -1,0 +1,57 @@
+{
+  "name": "test-project",
+  "description": "Testing out this composer thing",
+  "homepage": "http://eatpuesto.com",
+  "authors": [
+    {
+      "name": "Bryan Taylor",
+      "email": "bryan@ripe.com",
+      "homepage": "http://ripe.com"
+    }
+  ],
+  "type": "project",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.5.14",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?t=5.5.14&p=pro&a=download&k=b3JkZXJfaWQ9NjQwNDF8dHlwZT1wZXJzb25hbHxkYXRlPTIwMTUtMDktMTEgMTU6MjY6NDE="
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "gravityforms/gravityforms",
+        "version": "2.2.3.16",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://s3.amazonaws.com/gravityforms/releases/gravityforms_2.2.3.16.zip?AWSAccessKeyId=1603BBK66770VCSCJSG2&Expires=1501175068&Signature=XYTg6TH7wBasdb%2FtF4f5C85xncs%3D"
+        }
+      }
+    }
+  ],
+  "require": {
+    "advanced-custom-fields/advanced-custom-fields-pro": "5.5.14",
+    "gravityforms/gravityforms": "2.2.3.16",
+    "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
+    "wpackagist-plugin/simple-custom-post-order": "*",
+    "wpackagist-plugin/timber-library": "1.2.4",
+    "wpackagist-plugin/wp-migrate-db": "*",
+    "wpackagist-plugin/zoneboard": "*"
+  },
+  "extra": {
+    "installer-paths": {
+        "../plugins/{$name}/": ["type:wordpress-plugin"]
+    }
+  }
+}

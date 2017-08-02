@@ -1,0 +1,34 @@
+/*
+Reset Styles
+--------------
+@description: Reset Styles to override default browser styles
+-----------------------------------------------------------------------------*/
+
+html {
+  box-sizing: $box-sizing;
+  font-size: $base-font-size;
+}
+
+html,body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  @include body-copy;
+  color: color(base,dark);
+  font-feature-settings: "kern", "liga", "pnum";
+  text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}

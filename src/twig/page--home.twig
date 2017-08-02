@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+
+{% block content %}
+{# FeatureBlock #}
+<section class="FeatureBlock">
+  <div class="FeatureBlock-wrapper">
+    <div class="FeatureBlock-content c-c">
+      <h1>{{what_page_am_i}}</h1>
+      <p>Welcome to the WordPress Starter! This is a FeatureBlock Component.</p>
+    </div>
+  </div>
+</section>
+{# FeatureBlock #}
+<div class="container">
+  {% if posts %}
+  {% for post in posts %}
+  <a href="{{post.link}}">
+    <h2>{{post.title}}</h2>
+  </a>
+  {% endfor %}
+  {% endif %}
+</div>
+{% endblock %}

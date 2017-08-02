@@ -1,0 +1,44 @@
+/* 
+Pagination Component
+---------------------------
+@description: 
+------------------------------------------------*/
+
+.Pagination {
+  text-align: center;
+}
+
+.Pagination__prev,
+.Pagination__next {
+  display: inline-block;
+  padding: $small-spacing $base-spacing;
+  font-family: $bold-font-family;
+}
+
+.Pagination__prev__img {
+  display: inline-block;
+  height: $base-font-size;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  margin-right: 6px;
+}
+
+.Pagination__next__img {
+  display: inline-block;
+  height: $base-font-size;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  margin-left: 6px;
+}
+
+.Pagination__pageList {
+  display: inline-block;
+  margin: 0 $base-spacing;
+  padding-left: 0;
+  list-style: none;
+}
+
+.pageList__page {
+  display: inline-block;
+  font-family: $bold-font-family;
+}

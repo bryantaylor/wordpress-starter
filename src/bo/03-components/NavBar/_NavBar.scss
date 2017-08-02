@@ -1,0 +1,243 @@
+/* 
+NavBar Component
+---------------------------
+@description: 
+------------------------------------------------*/
+
+.NavBar {
+  width: 100%;
+  height: 64px;
+  z-index: z(nav);
+  box-shadow: $base-box-shadow;
+  transition: transform $base-duration $base-timing,
+              height $base-duration $base-timing;
+
+  @include media-breakpoint-up(md) {
+    height: 98px;
+    background-color: color(base,light);
+  }
+}
+
+// Homepage Hero
+.NavBar.hide--nav {
+  transform: translateY(-100%);
+}
+
+.NavBar-wrapper {
+  @include make-container();
+  width: 100%;
+  position: relative;
+  background-color: color(base,light);
+}
+
+/*
+** NavBar Logo
+----------------------------------------------*/
+.NavBar-anchor {
+  float: left;
+  cursor: pointer;
+  
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+}
+
+.NavBar .NavBar-anchor .NavBar-logo {
+  width: 40px;
+  margin: $base-font-size * 0.666666667 0;
+
+  @include media-breakpoint-up(md) {
+    width: 44px;
+    margin: $base-font-size * 1.5 0;
+  }
+}
+
+/*
+** Global Site Navigation
+----------------------------------------------*/
+
+.NavBar .NavBar-menuWrapper {
+  float: none;
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+    float: right;
+    line-height: 5.35em;
+  }
+
+  @include media-breakpoint-down(sm) {
+    background-color: color(brand,primary);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    //transition: transform $mediumDuration $base-timing;
+  }
+}
+
+.NavBar .NavBar-menu {
+  position: relative;
+  margin: 0 auto;
+  overflow: visible;
+  padding: $base-spacing 0;
+  
+  @include media-breakpoint-up(md) {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*
+** Global Site Navigation Link
+----------------------------------------------*/
+.NavBar .NavBar-item {
+  display: block;
+  font-size: $base-font-size * 2;
+  font-family: $bold-font-family;
+  //text-align: center;
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+    display: inline-block;
+    margin-right: $base-font-size * 3.2222;
+    font-size: $base-font-size;
+    text-decoration: none;
+    background: transparent;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.NavBar .NavBar-link {
+  display: block;
+  padding: $base-spacing / 4 $base-spacing * 1.5;
+  opacity: 0;
+  transition: opacity $base-duration $base-timing $mediumDuration;
+
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+    padding: 0;
+    opacity: 1;
+  }
+}
+
+.NavBar .NavBar-link.active {
+  
+}
+
+/*
+** Mobile Navigation State
+----------------------------------------------------------------*/
+
+// Mobile toggle Button
+.NavBar .NavBar-mobileToggle {
+  display: block;
+  position: relative;
+  float: right;
+  overflow: hidden;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  margin-top: 19px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.NavBar .NavBar-mobileToggle span {
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 0px;
+  right: 0px;
+  height: 5px;
+  border-radius: 10px;
+  background: color(brand,primary);
+  transition: background $base-duration 0.3s;
+}
+
+.NavBar .NavBar-mobileToggle span::before,
+.NavBar .NavBar-mobileToggle span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: color(brand,primary);
+  content: "";
+  border-radius: 10px;
+  transition-duration: $base-duration, $base-duration;
+  transition-delay: $base-duration, 0s;
+}
+
+.NavBar .NavBar-mobileToggle span::before {
+  top: -9px;
+  transition-property: top, transform;
+}
+
+.NavBar .NavBar-mobileToggle span::after {
+  bottom: -9px;
+  transition-property: bottom, transform;
+}
+
+/*
+** Active state, i.e. menu open
+---------------------------------------------*/
+.NavBar.menu--open {
+  
+}
+
+.NavBar.menu--open .NavBar-wrapper {
+  
+}
+
+.NavBar.menu--open .NavBar-menuWrapper {
+
+}
+
+.NavBar.menu--open .NavBar-link {
+  opacity: 1;
+}
+
+.NavBar.menu--open .NavBar-menu {
+  
+}
+
+// Mobile Toggle Icon
+.NavBar.menu--open .NavBar-mobileToggle span {
+  background: none;
+}
+
+.NavBar.menu--open .NavBar-mobileToggle span::before {
+  top: -2px;
+  transform: rotate(45deg);
+}
+
+.NavBar.menu--open .NavBar-mobileToggle span::after {
+  bottom: 2px;
+  transform: rotate(-45deg);
+}
+
+.NavBar.menu--open .NavBar-mobileToggle span::before,
+.NavBar.menu--open .NavBar-mobileToggle span::after {
+  background-color: color(brand,primary);
+  transition-delay: 0s, 0.3s;
+}

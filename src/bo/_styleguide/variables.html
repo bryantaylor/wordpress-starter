@@ -1,0 +1,118 @@
+@include("_styleguide/_partials/header.html")
+@include("_styleguide/_partials/nav.html")
+
+<div class="container">
+  <h1 class="jumbo p-t-lg" id="main">Variables</h1>
+  <h1 class="font-weight-normal">
+    These global settings are used to keep the look & feel of your web application consistent and easy to maintain.
+  </h1>
+  <ul class="p-t">
+    <li><a href="#colorpalette">Color Palette</a></li>
+    <li><a href="#colorpalette">Color Defaults</a></li>
+    <li><a href="#colorpalette">Sizing & Spacing</a></li>
+    <li><a href="#colorpalette">Grid Settings</a></li>
+    <li><a href="#colorpalette">Breakpoints</a></li>
+    <li><a href="#colorpalette">Transitions & Timing</a></li>
+  </ul>
+  <div class="row p-t-lg">
+    <div class="col-md-12">
+      <h2 id="colorpalette">Color Palette</h2>
+    </div>
+    <div class="col-md-6">
+      <p>The purpose of this HTML is to help determine what default settings are with Bitters and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
+    </div>
+    <div class="col-md-6">
+      <pre>
+        <code class="language-scss">
+/* 
+Color Palette. 
+Tints available as a function 
+*/
+$colors : (
+  brand : (
+    primary                 : #dfg45a, 
+    secondary               : #ffffff,
+    accent                  : #ffffff
+  ),
+  base : (
+    light                   : #ffffff,
+    dark                    : #000000
+  ),
+  alert : (
+    success                 : #ffffff,
+    info                    : #ffffff,
+    warning                 : #ffffff,
+    error                   : #ffffff
+  )
+);
+        </code>
+     </pre>
+    </div>
+  </div>
+
+<br>
+<br>
+<pre>
+   <code class="language-scss">
+/*
+Sizing & Spacing.
+All layout spacing and ui-sizing should be built on top of this variable map
+*/
+ $body-background           : color(base,light);
+ $text-color                : color(base,dark);
+ $user-action-color         : color(brand,primary);
+ $user-action-color-hover   : color(brand,primary);
+ $border-color              : color(base,light);
+
+/*
+Sizing & Spacing.
+All layout spacing and ui-sizing should be built on top of this variable map
+*/
+  $box-sizing               : border-box;
+  $base-font-size           : 16px;
+  $base-line-height         : 1.5;
+  $base-border-radius       : .25rem;
+  $base-border-color        : color(base,dark);
+  $base-border              : 1px solid $base-border-color;
+  $base-spacing             : $base-line-height * 1rem;
+  $small-spacing            : $base-spacing / 2;
+
+/* 
+Grid Settings.
+These are used 
+*/
+  $grid-columns             : 12;
+  $grid-gutter-width        : $base-spacing;
+  $enable-flex              : true;
+  $enable-grid-classes      : false;
+  $max-width                : 1120px;
+
+/* 
+Breakpoints.  
+If grid classes are enabled, each breakpoint generated about 5kb of css 
+*/
+$grid-breakpoints: (
+  xs                        : 0,      // Extra small screen / phone
+  sm                        : 34em,   // Small screen / phone
+  md                        : 48em,   // Medium screen / tablet
+  lg                        : 62em,   // Large screen / desktop
+  xl                        : 75em    // Extra large screen / wide desktop
+);
+
+/*
+Animation.
+Use these settings to keep overall animation feeling consistent.  
+*/
+  $base-duration            : 250ms !default;
+  $base-timing              : ease-out !default;
+  $fastDuration             : 100ms !default;
+  $mediumDuration           : 300ms !default;
+  $slowDuration             : 500ms !default;
+  $default-transition-all   : all $base-duration $base-timing;
+
+  </code>
+  </pre> 
+</div>
+
+@include("_styleguide/_partials/footer.html")
+

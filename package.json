@@ -1,0 +1,96 @@
+{
+  "name": "gulp-starter",
+  "version": "1.0.0",
+  "description": "start a new project quickly! Inspired by https://github.com/mrhenry/gulp-starter and https://github.com/vigetlabs/gulp-starter",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ripestudios/gulp-starter.git"
+  },
+  "keywords": [
+    "gulp",
+    "starter",
+    "front-end",
+    "web",
+    "development",
+    "scss",
+    "js",
+    "jade"
+  ],
+  "author": "Paul Best <paul@ripe.com> (http://ripe.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ripestudios/gulp-starter/issues"
+  },
+  "homepage": "https://github.com/ripestudios/gulp-starter#readme",
+  "dependencies": {
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.9.11",
+    "browserify": "^13.0.0",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-add-src": "^0.2.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-concat-util": "^0.5.4",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-csslint": "^0.2.0",
+    "gulp-data": "^1.2.0",
+    "gulp-favicons": "^1.0.9",
+    "gulp-iconfont": "^5.0.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-nunjucks": "^2.0.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.0.4",
+    "gulp-sass-bulk-import": "^0.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-swig": "^0.7.4",
+    "gulp-twig": "^0.4.0",
+    "gulp-watch": "^4.3.5",
+    "is-glob": "^2.0.1",
+    "lodash.assign": "^4.0.4",
+    "lodash.clonedeep": "^4.5.0",
+    "marked": "^0.3.5",
+    "minimist": "^1.2.0",
+    "path": "^0.12.7",
+    "require-dir": "^0.3.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0",
+    "yamljs": "^0.2.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-preset-es2015": "^6.5.0",
+    "gulp-iconfont-css": "^2.0.0",
+    "gulp-if": "^2.0.0",
+    "gulp-nunjucks-html": "^2.0.0",
+    "gulp-through": "^0.3.0",
+    "jspm": "^0.16.13",
+    "lodash": "^3.10.1",
+    "merge-stream": "^1.0.0",
+    "ncp": "^2.0.0",
+    "recursive-copy": "^2.0.2",
+    "run-sequence": "^1.1.4",
+    "through2": "^2.0.0"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "build/js"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
