@@ -26,7 +26,7 @@
           "url": "https://connect.advancedcustomfields.com/index.php?t=5.5.14&p=pro&a=download&k=b3JkZXJfaWQ9NjQwNDF8dHlwZT1wZXJzb25hbHxkYXRlPTIwMTUtMDktMTEgMTU6MjY6NDE="
         }
       }
-    },
+    }
     {
       "type": "package",
       "package": {
@@ -39,15 +39,16 @@
         }
       }
     }
+
   ],
   "require": {
     "advanced-custom-fields/advanced-custom-fields-pro": "5.5.14",
-    "gravityforms/gravityforms": "2.2.3.16",
     "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
     "wpackagist-plugin/simple-custom-post-order": "*",
     "wpackagist-plugin/timber-library": "1.2.4",
     "wpackagist-plugin/wp-migrate-db": "*",
-    "wpackagist-plugin/zoneboard": "*"
+    "wpackagist-plugin/zoneboard": "*",
+    "gravityforms/gravityforms": "2.2.3.16"
   },
   "extra": {
     "installer-paths": {
