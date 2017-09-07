@@ -8,7 +8,7 @@ mv composer.phar /usr/local/bin/composer
 
 # Install
 ```
-bash <(curl -s https://raw.githubusercontent.com/ripestudios/wordpress-starter-theme/master/install.bash) [project name]
+bash <(curl -s https://raw.githubusercontent.com/bryantaylor/wordpress-starter/master/install.bash) [project name]
 ```
 
 # Gulp Workflow
