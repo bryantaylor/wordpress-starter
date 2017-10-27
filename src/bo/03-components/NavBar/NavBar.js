@@ -1,8 +1,7 @@
 /*
 NAVBAR Functionality
 --------------------------------------------*/
-
-import './vendor/throttle.js';
+import throttle from './vendor/throttle';
 
 // Function that handles all NavBar task
 var NavBar = (function() {

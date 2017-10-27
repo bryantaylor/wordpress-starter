@@ -1,12 +1,12 @@
 {
-  "name": "test-project",
-  "description": "Testing out this composer thing",
-  "homepage": "http://eatpuesto.com",
+  "name": "WordPress Starter",
+  "description": "",
+  "homepage": "https://github.com/bryantaylor/wordpress-starter",
   "authors": [
     {
       "name": "Bryan Taylor",
-      "email": "bryan@ripe.com",
-      "homepage": "http://ripe.com"
+      "email": "bryant486@gmail.com",
+      "homepage": ""
     }
   ],
   "type": "project",

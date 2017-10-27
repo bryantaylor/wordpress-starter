@@ -6,7 +6,15 @@ Reset Styles
 
 html {
   box-sizing: $box-sizing;
-  font-size: $base-font-size;
+  font-size: map-get($type-size, sm); // 16px
+
+  @include media-breakpoint-up(md) {
+    font-size: map-get($type-size, md); // 18px
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: map-get($type-size, lg); // 21px
+  }
 }
 
 html,body {
@@ -20,7 +28,6 @@ body {
   color: color(base,dark);
   font-feature-settings: "kern", "liga", "pnum";
   text-size-adjust: 100%;
-  text-size-adjust: 100%;
 }
 
 *, *:before, *:after {
@@ -29,6 +36,8 @@ body {
 
 img,
 picture {
-  margin: 0;
+  display: inline-block;
   max-width: 100%;
+  margin: 0;
+  vertical-align: middle;
 }

@@ -1,12 +1,12 @@
 @import "../01-tools/sass/color-maps";
 
-/* 
-Color Pallette. 
-Tints available as a function 
-*/
+/*
+Color Pallette.
+Tints available as a function
+--------------------------------------------------------------------------------------------*/
 $colors : (
   brand : (
-    primary                 : #2b00f7, 
+    primary                 : #2b00f7,
     secondary               : #ffffff,
     accent                  : #ffffff
   ),
@@ -25,7 +25,7 @@ $colors : (
 /*
 Sizing & Spacing.
 All layout spacing and ui-sizing should be built on top of this variable map
-*/
+--------------------------------------------------------------------------------------------*/
  $body-background           : color(base,light);
  $text-color                : color(base,dark);
  $user-action-color         : color(brand,primary);
@@ -33,11 +33,21 @@ All layout spacing and ui-sizing should be built on top of this variable map
  $border-color              : color(base,light);
 
 /*
+Typography.
+All typography should be built on top of this variable map
+--------------------------------------------------------------------------------------------*/
+$type-size : (
+  sm                        : 16px,   // Mobile / Tablet
+  md                        : 18px,   // Small Desktop
+  lg                        : 21px    // Large Desktop
+);
+
+/*
 Sizing & Spacing.
 All layout spacing and ui-sizing should be built on top of this variable map
-*/
+--------------------------------------------------------------------------------------------*/
   $box-sizing               : border-box;
-  $base-font-size           : 16px;
+  $base-font-size           : 1rem;
   $base-line-height         : 1.5;
   $base-border-radius       : .25rem;
   $base-border-color        : color(base,dark);
@@ -47,20 +57,20 @@ All layout spacing and ui-sizing should be built on top of this variable map
   $small-spacing            : $base-spacing / 2;
   $section-spacing          : $base-spacing * 2;
 
-/* 
+/*
 Grid Settings.
-These are used 
-*/
+These are used
+--------------------------------------------------------------------------------------------*/
   $grid-columns             : 12;
   $grid-gutter-width        : $base-spacing;
   $enable-flex              : false;
   $enable-grid-classes      : true;
   $max-width                : 1120px;
 
-/* 
-Breakpoints.  
-If grid classes are enabled, each breakpoint generated about 5kb of css 
-*/
+/*
+Breakpoints.
+If grid classes are enabled, each breakpoint generated about 5kb of css
+--------------------------------------------------------------------------------------------*/
 $grid-breakpoints: (
   xs                        : 0,      // Extra small screen / phone
   sm                        : 34em,   // Small screen / phone
@@ -71,8 +81,8 @@ $grid-breakpoints: (
 
 /*
 Animation.
-Use these settings to keep overall animation feeling consistent.  
-*/
+Use these settings to keep overall animation feeling consistent.
+--------------------------------------------------------------------------------------------*/
   $base-duration            : 250ms !default;
   $base-timing              : ease-out !default;
   $fastDuration             : 100ms !default;
