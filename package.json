@@ -23,9 +23,9 @@
   "author": "Bryan Taylor",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ripestudios/gulp-starter/issues"
+    "url": "https://github.com/bryantaylor/wordpress-starter/issues"
   },
-  "homepage": "https://github.com/ripestudios/gulp-starter#readme",
+  "homepage": "https://github.com/bryantaylor/wordpress-starter",
   "dependencies": {
     "babelify": "^7.2.0",
     "browser-sync": "^2.9.11",

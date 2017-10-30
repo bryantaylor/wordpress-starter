@@ -14,16 +14,16 @@ description: [
  // Check the 'config.yml' file for the location of the template scss file. 
 
 @font-face {
-  font-family: "wordpress-starter-icons";
-  src: url('../fonts/icons/wordpress-starter-icons.eot');
-  src: url('../fonts/icons/wordpress-starter-icons.eot?#iefix') format('eot'),
-    url('../fonts/icons/wordpress-starter-icons.woff') format('woff'),
-    url('../fonts/icons/wordpress-starter-icons.ttf') format('truetype'),
-    url('../fonts/icons/wordpress-starter-icons.svg#wordpress-starter-icons') format('svg');
+  font-family: "wordpress-icons";
+  src: url('../fonts/icons/wordpress-icons.eot');
+  src: url('../fonts/icons/wordpress-icons.eot?#iefix') format('eot'),
+    url('../fonts/icons/wordpress-icons.woff') format('woff'),
+    url('../fonts/icons/wordpress-icons.ttf') format('truetype'),
+    url('../fonts/icons/wordpress-icons.svg#wordpress-icons') format('svg');
 }
 
 @mixin icon-styles {
-  font-family: "wordpress-starter-icons";
+  font-family: "wordpress-icons";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   font-style: normal;

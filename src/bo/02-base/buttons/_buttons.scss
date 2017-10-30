@@ -1,43 +1,54 @@
-// ===================================================================================
-//  Variables
-// -------------
+/* ===================================================================================
+Variables
+/* ===================================================================================
 
-// -- Selectors
+/*
+Selectors
+--------------------------------------------------------------*/
 $all-buttons:     '.btn,
                    button,
                    input[type=submit],
                    input[type=button]' !default;
 
 $ui-color-action: color(base,dark);
-
-// -- Transition
+/*
+Transition
+--------------------------------------------------------------*/
 $button-transition     : all $base-duration $base-timing;
+/*
+Border Radius
+--------------------------------------------------------------*/
+$button-borderRadius   : $base-border-radius;
 
-// -- Border Radius
-$button-borderRadius   : $base-border-radius; 
-
-// -- Font
+/*
+Font
+--------------------------------------------------------------*/
 $button-font: (
   family               : $bold-font-family,
   weight               : $bold-font-family
 );
 
-// -- Text Size
+/*
+Text Size
+--------------------------------------------------------------*/
 $button-textSize: (
-  small                : $base-font-size * .75,
+  small                : $base-font-size * 0.75,
   default              : $base-font-size,
   large                : $base-font-size * 1.25
 );
-
-// -- Padding
+/*
+Padding
+--------------------------------------------------------------*/
 $button-padding: (
-  small                : $small-spacing*.75 $base-spacing*.75,
+  small                : $small-spacing * 0.75 $base-spacing * 0.75,
   default              : $small-spacing $base-spacing,
-  large                : $small-spacing*1.25 $base-spacing*1.25,
+  large                : $small-spacing * 1.25 $base-spacing * 1.25,
 );
 
-// Colors:
-// ------------
+/*
+Colors:
+--------------------------------------------------------------*/
+
 // Default Button
 $default-button: (
   background        : transparent,
@@ -50,9 +61,9 @@ $default-button: (
 $dark-button: (
   background        : $ui-color-action,
   outline           : $ui-color-action,
-  color             : #ffffff, 
-  hover-background  : #12fe66,
-  hover-outline     : #12fe66,
+  color             : #ffffff,
+  hover-background  : color(brand,primary),
+  hover-outline     : color(brand,primary),
   hover-color       : #ffffff
 );
 // Light Button
@@ -60,16 +71,18 @@ $light-button: (
   background        : #ddd,
   outline           : #ddd,
   color             : #000,
-  hover-background  : #12fe66,
+  hover-background  : color(brand,primary),
   hover-color       : #ffffff
 );
 
 
-// ===================================================================================
-//  Button Styles
+/* ===================================================================================
+Button Styles
+====================================================================================*/
 
-
-// -- Default Button
+/*
+Default
+--------------------------------------------------------------*/
 .btn {
   display:             inline-block;
   appearance:          none;
@@ -98,7 +111,7 @@ $light-button: (
     color:             map-get($default-button, hover-color);
   }
 
-  &:disabled, 
+  &:disabled,
   &.disabled {
     cursor: not-allowed;
     opacity: 0.5;
@@ -119,7 +132,9 @@ $light-button: (
   }
 }
 
-// -- Dark Button
+/*
+Dark Button
+--------------------------------------------------------------*/
 .btn-dark {
   background-color:    map-get($dark-button, background);
   border-color:        map-get($dark-button, outline);
@@ -133,15 +148,17 @@ $light-button: (
 
   &.outline {
     background-color: transparent !important;
-    color:            map-get($dark-button, outline); 
+    color:            map-get($dark-button, outline);
   }
 
   &:hover.outline {
-    color:            map-get($dark-button, hover-outline); 
+    color:            map-get($dark-button, hover-outline);
   }
 }
 
-// -- Light Button
+/*
+Light
+--------------------------------------------------------------*/
 .btn-light {
   background-color:    map-get($light-button, background);
   border-color:        map-get($light-button, background);
@@ -155,11 +172,10 @@ $light-button: (
 
   &.outline {
     background-color: transparent !important;
-    color:            map-get($light-button, outline); 
+    color:            map-get($light-button, outline);
   }
 
   &:hover.outline {
-    color:            map-get($light-button, hover-outline); 
+    color:            map-get($light-button, hover-outline);
   }
 }
-

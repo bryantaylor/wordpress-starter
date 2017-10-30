@@ -94,7 +94,7 @@ compile-sass:
 # Task : Fonts
 fonts:
   # ---
-  watch: 
+  watch:
     - './src/fonts/**/*.woff2'
     - './src/fonts/**/*.woff'
     - './src/fonts/**/*.eot'
@@ -140,4 +140,3 @@ minify-images:
 bojs:
   clean:
     - './build/assets/js'
-    
