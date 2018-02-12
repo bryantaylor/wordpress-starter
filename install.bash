@@ -33,7 +33,7 @@ WORDPRESS_CORE_NAME="wordpress"                                                 
 
 # WordPress Starter Variables
 WORDPRESS_STARTER_URL="https://github.com/bryantaylor/wordpress-starter/archive/master.zip"   # Github URL of gulp core
-WORDPRESS_STARTER_NAME="wordpress-starter"                                             # Name of repository
+WORDPRESS_STARTER_NAME="wordpress-starter-master"                                             # Name of repository
 
 # Virtual Host Variables
 VHOST_DOMAIN=".localhost"
