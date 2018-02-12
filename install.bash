@@ -3,10 +3,10 @@
 # WORDPRESS INSTALL SCRIPT
 # -------------------
 # This script allows you to create a new site utilizing the ripe gulp workflow
-# 
+#
 #
 # The scripts executes the following actions:
-# 
+#
 # 1) Download core from wordpress.com
 # 2) Sanitize themes folder
 # 3) Download WordPress Starter
@@ -32,11 +32,11 @@ WORDPRESS_CORE_URL="https://wordpress.org/latest.zip"                           
 WORDPRESS_CORE_NAME="wordpress"                                                      # Default WordPress core directory name
 
 # WordPress Starter Variables
-WORDPRESS_STARTER_URL="https://github.com/ripestudios/wordpress-starter-theme/archive/master.zip"   # Github URL of gulp core
-WORDPRESS_STARTER_NAME="wordpress-starter-theme-master"                                             # Name of repository
+WORDPRESS_STARTER_URL="https://github.com/bryantaylor/wordpress-starter/archive/master.zip"   # Github URL of gulp core
+WORDPRESS_STARTER_NAME="wordpress-starter"                                             # Name of repository
 
 # Virtual Host Variables
-VHOST_DOMAIN=".dev"
+VHOST_DOMAIN=".localhost"
 WP_INSTALL_PATH="/wp-admin/install.php"
 
 # Formatting stuff

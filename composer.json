@@ -32,7 +32,7 @@
     "advanced-custom-fields/advanced-custom-fields-pro": "5.5.14",
     "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
     "wpackagist-plugin/simple-custom-post-order": "*",
-    "wpackagist-plugin/timber-library": "1.2.4",
+    "wpackagist-plugin/timber-library": "1.7.0",
     "wpackagist-plugin/wp-migrate-db": "*",
     "wpackagist-plugin/zoneboard": "*"
   },
