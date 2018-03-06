@@ -58,7 +58,7 @@
     "is-glob": "^2.0.1",
     "lodash.assign": "^4.0.4",
     "lodash.clonedeep": "^4.5.0",
-    "marked": "^0.3.5",
+    "marked": "^0.3.17",
     "minimist": "^1.2.0",
     "path": "^0.12.7",
     "require-dir": "^0.3.0",
