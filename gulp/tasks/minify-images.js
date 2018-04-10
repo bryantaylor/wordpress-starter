@@ -42,7 +42,7 @@ var imagesMinify = function() {
     console.log('images');
     return gulp.src(config.src)
       .pipe(changed(config.dest)) // Ignore unchanged files
-      .pipe(imagemin()) // Optimize
+      .pipe(imagemin({svgoPlugins: [{cleanupIDs: false}]})) // Optimize
       .pipe(gulp.dest(config.dest))
       //.pipe(gulp.dest(config.dest.build))
       .pipe(browserSync.reload({stream:true}))
@@ -57,4 +57,3 @@ var imagesMinify = function() {
 // =======
 gulp.task('minify-images', imagesMinify);
 module.exports = imagesMinify;
-
