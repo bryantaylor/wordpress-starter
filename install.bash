@@ -94,7 +94,7 @@ unzip $PROJECT_NAME.zip
 rm -rf $PROJECT_NAME.zip
 mv ./$WORDPRESS_STARTER_NAME ./$PROJECT_NAME
 # Move contents to root theme level
-mv $PROJECT_NAME/* .
+mv $PROJECT_NAME/{.,}* .
 # remove old theme directory
 rm -rf $PROJECT_NAME
 
