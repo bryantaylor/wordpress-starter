@@ -6,8 +6,8 @@
 projectName: "wordpress-starter"                    # For WordPress projects, this will be the theme name
 GAcode: null                                        # Google Analytics code eg -"UA-66481277-1"
 browserSync:
- proxy: "wordpress-starter.dev"
- host: "wordpress-starter.dev"
+ proxy: "wordpress-starter.localhost"
+ host: "wordpress-starter.localhost"
  port: 3000
  notify: false
  open: "external"
